@@ -6,3 +6,10 @@ spring:
           uri : lb://WIKI-PRODUCER
           predicates :
            - Path=/producer/**
+  config:
+    import: optional:configserver:http://localhost:8006/configServer
+server:
+  port: 8084
+eureka:
+  instance:
+    hostname: localhost
