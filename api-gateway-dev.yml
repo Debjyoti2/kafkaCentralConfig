@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: WIKI-PRODUCER
+          uri : lb://WIKI-PRODUCER
+          predicates :
+           - Path=/producer/**
